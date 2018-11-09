@@ -5,7 +5,7 @@ Neste repositório temos uma ferramenta que constrói, a partir de dados do [Las
 
 ## Dados
 
-Em [subfolder](data/) estão os CSVs que foram gerados a partir da API do Last.fm
+Em [data](data/) estão os CSVs que foram gerados a partir da API do Last.fm
 
 ## Grafo
 
