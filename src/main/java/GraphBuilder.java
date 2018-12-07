@@ -16,11 +16,10 @@ public class GraphBuilder {
 
             while (reader.hasNext()) {
                 List<String> line = util.parseLine(reader.nextLine());
-                Artist artist = new Artist(line.get(0), line.get(1));
 
-                graph.addVertex(artist.getName());
-                graph.addVertex(artist.getRelatedTo());
-                DefaultWeightedEdge edge = graph.addEdge(artist.getName(), artist.getRelatedTo());
+                graph.addVertex(line.get(0));
+                graph.addVertex(line.get(1));
+                DefaultWeightedEdge edge = graph.addEdge(line.get(0), line.get(1));
                 graph.setEdgeWeight(edge, Integer.parseInt(line.get(2)));
             }
             reader.close();

@@ -2,11 +2,12 @@ import java.util.Objects;
 
 public class Artist {
     private String name;
-    private String relatedTo;
+    private String gender;
 
-    public Artist(String name, String related) {
+
+    public Artist(String name, String gender) {
         this.name = name;
-        this.relatedTo = related;
+        this.gender = gender;
     }
 
     public String getName() {
@@ -17,12 +18,12 @@ public class Artist {
         this.name = name;
     }
 
-    public String getRelatedTo() {
-        return relatedTo;
+    public String getGender() {
+        return gender;
     }
 
-    public void setRelatedTo(String relatedTo) {
-        this.relatedTo = relatedTo;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     @Override
@@ -36,5 +37,10 @@ public class Artist {
     @Override
     public int hashCode() {
         return Objects.hash(getName());
+    }
+
+    @Override
+    public String toString(){
+        return  String.format("Name: %s Gender: %s", this.getName(), this.getGender());
     }
 }
